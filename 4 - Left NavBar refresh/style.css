@@ -1,0 +1,232 @@
+:root{    
+    --background-color: #ffffff;
+    --foreground-color: #333;
+    --font-color: #00bbff;
+
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.618em;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+    margin-top: 1em;
+    background-color: var(--background-color);
+    color: var(--background-color);
+    
+    
+}
+
+/* ============= Links ============ */
+
+a{
+    color: var(--background-color);
+    text-decoration: none;
+    padding: 0 .5em;
+    border-radius: 5px;
+    border: 1px solid var(--background-color);
+}
+
+a:hover{
+    color: var(--font-color);    
+    font-style: bold;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+    transition:  0.3s ease;
+}
+
+/* ============= Headers ============ */
+h1{
+    color: var(--font-color);
+    padding: 1em 1em;
+}
+
+h2, h3{
+    color: var(--foreground-color);    
+}
+
+h2{
+    transform: scale(var(--section-h2-scale));
+    transition: 0.3s ease;
+}
+
+p{    
+    font-size: 1.3em;
+}
+
+/* ============= Header Main Footer ============ */
+
+header, main{
+    margin: 3em auto;
+    width: 75vw;
+    min-width: 800px;
+}
+
+header{    
+    background: var(--foreground-color);
+    border-radius: 1em;
+}
+
+header{
+    display: grid;
+    grid-template-rows: 150px;
+    justify-content: center;
+    height: 300px;
+}
+
+header h1{
+    font-size: 3em;
+    
+}
+
+header span{
+    font-size: 1.5em;
+    color: var(--font-color);
+    padding: 0 2em;
+    margin: auto auto 3em;
+}
+
+/* ============= NAVIGATION BAR ============ */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    white-space: nowrap;
+    z-index: 20;
+    
+    background: var(--foreground-color);
+    --nav-name-size: 0.3;
+    
+    --nav-name-font-size: 1em;
+    --nav-a-opacity: 1;
+    --nav-name-pos: 0.5vw;
+    --nav-a-width: 27px;
+    --nav-a-margin-left: 0.8em;
+    --nav-a-color: #00000000;
+    --nav-span-opacity: 0;
+    --nav-span-visibility: hidden;
+    --nav-a-pad-left: 0.5em;
+    --h2-spaces-shrink: 0px;
+    transition: all 0.3s ease;
+    box-shadow: 5px 0px 10px 3px #222;
+}
+
+nav:hover{
+    width: 135px;
+    --nav-name-size: 1;
+    --nav-name-font-size: 2em;
+    --nav-a-opacity: 1;
+    --nav-name-pos: 1em;
+    --nav-a-width: 8vw;
+    --nav-a-margin-left: 0.5em;
+    --nav-a-color: var(--background-color);
+    --nav-span-opacity: 1;
+    --nav-span-visibility: visible;
+    --h2-spaces-shrink: 1em;
+    --nav-a-pad-left: 1.7em;
+}
+
+nav .menuTitle{
+    font-size: 0.8em;
+    text-align: center;
+}
+
+nav .navName{
+    flex-grow: 1;
+    
+}
+
+nav h2{    
+        
+    margin: 1em 0 1em var(--nav-name-pos);
+    color: var(--font-color);
+    /* transform: rotate(90deg); */
+    writing-mode: sideways-lr;
+    font-size: var(--nav-name-font-size);
+    /* transform: scale(var(--nav-name-size)); */
+    transition: 0.3s ease;
+    
+}
+ nav h2 > span{
+    font-size: var(--h2-spaces-shrink);
+    color: var(--foreground-color);
+    transition: 0.3s ease;
+}
+
+
+nav a{
+    margin: 1em 0 1em var(--nav-a-margin-left);
+    padding-top: 0.3em;
+    padding-left: var(--nav-a-pad-left);
+    font-size: 14px;
+    height: 30px;
+    width: var(--nav-a-width);
+    text-decoration: none;
+    
+    opacity: var(--nav-a-opacity);
+    --nav-span-color: var(--background-color);
+    transition:  0.3s ease;
+    
+}
+
+nav a:hover{
+    --nav-span-color: var(--foreground-color);  
+}
+
+nav a span{
+    
+    height: 30px;
+    
+    color: var(--nav-span-color);
+    font-size: var(--h2-spaces-shrink);
+    transition: 0.3s ease-out;
+}
+
+
+/* ============= Footer ============ */
+
+
+footer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 100vh;
+    padding: 0 0.5em;
+    writing-mode: vertical-rl;
+    margin: auto 0;
+    background: var(--foreground-color);
+    color: #fff;
+    z-index: 19;
+    box-shadow: -5px 0px 10px 3px #222;
+    text-align: center;
+    white-space: nowrap;
+    font: "Roboto";
+}
+
+footer #we{
+    color: #e7276f;
+}
+
+footer #can{
+    color: #009726;
+}
+
+footer #code{
+    color: #0081bd;
+}
+
+footer #it{
+    color: #f76c2c;
+}
