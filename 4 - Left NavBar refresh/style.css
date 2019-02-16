@@ -26,11 +26,10 @@ html{
 /* ============= Links ============ */
 
 a{
-    color: var(--background-color);
+    color: var(--font-color);
     text-decoration: none;
-    padding: 0 .5em;
     border-radius: 5px;
-    border: 1px solid var(--background-color);
+    /* border: 1px solid var(--background-color); */
 }
 
 a:hover{
@@ -114,8 +113,6 @@ nav{
     --nav-a-width: 27px;
     --nav-a-margin-left: 0.8em;
     --nav-a-color: #00000000;
-    --nav-span-opacity: 0;
-    --nav-span-visibility: hidden;
     --nav-a-pad-left: 0.5em;
     --h2-spaces-shrink: 0px;
     transition: all 0.3s ease;
@@ -128,11 +125,9 @@ nav:hover{
     --nav-name-font-size: 2em;
     --nav-a-opacity: 1;
     --nav-name-pos: 1em;
-    --nav-a-width: 8vw;
+    --nav-a-width: 120px;
     --nav-a-margin-left: 0.5em;
     --nav-a-color: var(--background-color);
-    --nav-span-opacity: 1;
-    --nav-span-visibility: visible;
     --h2-spaces-shrink: 1em;
     --nav-a-pad-left: 1.7em;
 }
@@ -168,12 +163,11 @@ nav h2{
 nav a{
     margin: 1em 0 1em var(--nav-a-margin-left);
     padding-top: 0.3em;
-    padding-left: var(--nav-a-pad-left);
     font-size: 14px;
     height: 30px;
     width: var(--nav-a-width);
     text-decoration: none;
-    
+    text-align: center;
     opacity: var(--nav-a-opacity);
     --nav-span-color: var(--background-color);
     transition:  0.3s ease;
@@ -193,6 +187,34 @@ nav a span{
     transition: 0.3s ease-out;
 }
 
+
+
+nav p{
+    margin: 1em 0 1em var(--nav-a-margin-left);
+    padding-top: 0.3em;
+    font-size: 14px;
+    height: 30px;
+    width: var(--nav-a-width);
+    text-decoration: none;
+    text-align: center;
+    opacity: var(--nav-a-opacity);
+    --nav-span-color: var(--background-color);
+    transition:  0.3s ease;
+    
+}
+
+nav p:hover{
+      
+}
+
+nav p span{
+    
+    height: 30px;
+    
+    color: var(--nav-span-color);
+    font-size: var(--h2-spaces-shrink);
+    transition: 0.3s ease-out;
+}
 
 /* ============= Footer ============ */
 
