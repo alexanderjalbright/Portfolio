@@ -43,7 +43,7 @@ main{
 
 
 
-.myProjects{
+.card{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +70,8 @@ main{
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    left:50vw;
 }
 
 .spacer a{
@@ -81,23 +83,35 @@ main{
 
 .spacer a:visited{
     color: var(--accent-color);
+    
 }
 
-.column img{
+.headShot{
+    width: 50vw;
+}
+
+.projectPic img{
     height: 25vh;
     width: 25vw;
     margin: 0 0 0 15vw;
     transition: 0.2s ease;
 }
 
-.column img:hover{
+.projectPic img:hover{
     transform: scale(1.1);
     box-shadow: 0px 0px 10px 3px var(--accent-color);
     
 }
 
 .column article{
-    max-width: 500px
+    margin: 0 3vw;
+    max-width: 25vw;
+    align-self: flex-start;
+    font-size: 24px;
+}
+
+.projDesc p, h2{
+    margin: 0 4.5vw;
 }
 
 /* ******** NAVBAR ******** */
@@ -108,7 +122,7 @@ nav{
     height: 6vh;    
     width: 100vw;
     background-color: var(--foreground-color);
-
+    z-index: 20;
     display: flex;
     justify-content: flex-end;
     
