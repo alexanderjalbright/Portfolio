@@ -1,0 +1,148 @@
+:root{    
+    --background-color: #fff;
+    --foreground-color: #222;
+    --accent-color: #00bbff;
+    --dd-border-radius: 15px;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.618em;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* ******** NAVBAR ******** */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;    
+    width: 100vw;
+    background-color: #222;
+
+    display: flex;
+    justify-content: flex-end;
+    
+    box-shadow: 0px 8px 10px 3px #222;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.name{
+    margin: 0 2em;
+    color: var(--accent-color);
+    align-self: center;
+    font-size: 2em;
+    --space-size: 0;
+    transition: 3s ease;
+}
+
+.name:hover{
+    --space-size: 1em;
+    
+}
+
+.name > span{
+    font-size: var(--space-size);
+    transition: 1s ease;
+}
+.filler{
+    flex-grow: 1;
+    color: var(--accent-color);
+    text-align: center;
+    align-self: center;
+}
+
+.dropdown{
+    margin: 0;
+    width: 10vw;
+    height: 100%;
+    z-index: 10;
+
+    
+    --choice1-pos: -50px;
+    --choice2-pos: -100px;
+    --choice3-pos: -150px;
+    --choice3bk-pos: -200px;
+}
+
+.dropdown:hover{
+    --choice1-pos: 0px;
+    --choice2-pos: 0px;
+    --choice3-pos: 0px;
+    --choice3bk-pos: 0px;
+    transition: 0.3s ease;
+}
+.dropdown div, a{    
+    width: 7vw;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    
+}
+
+
+
+.label{    
+    position: relative;
+    top: 0px;
+    z-index: 20;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    border-left: 2px solid var(--background-color);
+    border-right: 2px solid var(--background-color);
+    font-size: 1.2em;
+    
+}
+
+.choice{
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+}
+
+.choice:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--foreground-color);
+
+}
+
+.choice1{
+    position: relative;
+    top: var(--choice1-pos);
+ 
+    
+}
+
+.choice2{
+    position: relative;
+    top: var(--choice2-pos);
+ 
+}
+
+.choice3{
+    position: relative;
+    top: var(--choice3-pos);
+}
+
+.bottom{
+    border-bottom-left-radius: var(--dd-border-radius);
+    border-bottom-right-radius: var(--dd-border-radius);
+}
+
+
